@@ -1,16 +1,52 @@
-# React + Vite
+#  Kanban Board (Trello-style Task Manager)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## live project link: 
+https://kanban-board-pi-bay.vercel.app/
 
-Currently, two official plugins are available:
+A modern Kanban board application built using React, inspired by tools like Trello.  
+This project demonstrates task management with drag-and-drop, editing, deletion, and infinite scrolling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+-  Create, edit, and delete tasks
+-  Drag and drop tasks across columns
+-  Infinite scrolling per column (pagination)
+-  LocalStorage persistence (data saved on refresh)
+-  Clean and modern UI (glassmorphism design)
+-  Task count per column
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React (Vite)
+- JavaScript (ES6+)
+- @dnd-kit (Drag & Drop)
+- CSS (inline styling)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+ ## Project Structure
+ src/
+├── components/
+│ ├── Board.jsx
+│ ├── Column.jsx
+│ ├── TaskCard.jsx
+│ ├── TaskForm.jsx
+├── data/
+│ └── seed.js
+├── App.jsx
+
+
+##  How It Works
+
+- Tasks are stored in **React state** and synced with **localStorage**
+- Drag-and-drop updates task status dynamically
+- Each column implements **independent infinite scrolling**
+- Seed data is used for initial demo and testing
+
+
+##  Run Locally
+
+```bash
+npm install
+npm run dev
+
+
